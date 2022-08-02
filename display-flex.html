@@ -4,89 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex direction</title>
+    <title>Fundamentos - justify-content</title>
+<style>
+    .container{
+        max-width: 400px;
+        border: 1px solid black;
+        margin: 0;
+        display: flex;
+        margin-bottom: 10px;
+    }
 
-    <style>
-        .flex-container{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            list-style: none;
-        }
+    .item{
+        background-color: blueviolet;
+        margin: 5px;
+        text-align: center;
+        color: white;
+    }
 
-        .flex-item{
-            background: blue;
-            height: 50px;
-            width: 50px;
-            line-height: 50px;
-            font-size: 20px;
-            color: white;
-            text-align: center;
-            margin: 5px;
-        }
+    .flex-start{
+        justify-content: flex-start;
+    }
 
-        .row{
-            flex-direction: row;
-        }
+    .flex-end{
+        justify-content: flex-end;
+    }
 
-        .row-reverse{
-            flex-direction: row-reverse;
-        }
+    .center{
+        justify-content: center;
+    }
 
-        .row-reverse li{
-            background-color: red;
-        }
+    .space-between{
+        justify-content: space-between;
+    }
 
-        .column{
-            float: left;
-            flex-direction: column;
-        }
-
-        .column li{
-            background: orange;
-        }
-
-        .column-reverse{
-            float: right;
-            flex-direction: column-reverse;
-        }
-
-        .column-reverse li{
-            background: purple;
-        }
-    </style>
+    .space-around{
+        justify-content: space-around;
+    }
+</style>
 </head>
 <body>
-    <ul class="flex-container row">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>   
+    <p>flex-start</p>
+    <section class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">outro item</div>
+    </section>
+    
+    <p>flex-end</p>
+    <section class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">outro item</div>
+    </section>
 
-    <ul class="flex-container row-reverse">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul> 
+    <p>center</p>
+    <section class="container center">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-between</p>
+    <section class="container space-between">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-around</p>
+    <section class="container space-around">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
     
-    <ul class="flex-container column">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>
-    
-    <ul class="flex-container column-reverse">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>   
 </body>
 </html>
